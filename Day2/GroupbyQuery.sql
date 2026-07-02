@@ -1,0 +1,22 @@
+-- Find total scores from each country
+SELECT 
+country,
+sum(score) as total_score
+from customers
+group by country
+
+/*
+
+SELECT 
+country,
+first_name,
+sum(score) as total_score
+from customers
+group by country
+
+==> Raises a error:
+Column 'customers.first_name' is invalid in the select list because it is not contained 
+in either an aggregate function or the GROUP BY clause.
+*/
+
+
